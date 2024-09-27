@@ -10,12 +10,12 @@ loops_number := 372                                                 ; maximum 99
 ; loops_number  = free space / test file size
 ;               = 372 GB / 1 GB  = 372 loops
 file_count := 0
-loop, %loops_number%
-{
+loop, %loops_number%                                                ; copy from same file
+{                                                                   ; add file extension .001, .002, ..., .999
     file_count := file_count + 1
     if (file_count > 999)
         Exit
-    zero_pack := "000"
+    zero_pack := "000"                                              ; fill with zero
     file_extension := SubStr(zero_pack, 1, StrLen(zero_pack) - StrLen(file_count)) . file_count
     FileCopy, %source_folder%%source_file%, %destination_folder%%source_file%.%file_extension%, %over_write%
 }
