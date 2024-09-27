@@ -1,12 +1,12 @@
-; Autohotkey 1.1
+; AutoHotkey 1.1, editor VS Code, extension AutoHotkey NekoHelp
 ; Test Copy Files for SD Card
-source_folder := "D:\My Github\Autohotkey-v1.1\"                    ; must end with back slash
+source_folder := "D:\My Github\Autohotkey-v1.1\"                    ; must end with backslash
 source_file := "1GB.bin"                                            ; test file in source folder
-destination_folder := "D:\My Github\Autohotkey-v1.1\Destination\"   ; must end with back slash
+destination_folder := "D:\My Github\Autohotkey-v1.1\Destination\"   ; must end with backslash
 overwrite_mode := 1                                                 ; 0 not overwrite, 1 overwrite
 loops_number := 372                                                 ; maximum 999 loops
 ; example :
-; test file 1 gb download from internet
+; test file 1 GB download from internet
 ; loops_number  = free space / test file size
 ;               = 372 GB / 1 GB  = 372 loops
 file_count := 0
